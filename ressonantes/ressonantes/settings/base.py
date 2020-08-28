@@ -20,11 +20,6 @@ environ.Env.read_env()
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(PROJECT_DIR)
 
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
-
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -40,7 +35,6 @@ INSTALLED_APPS = [
     'debug_toolbar',
     'mptt',
     'corsheaders',
-
 
     # APPLICATION
     'core',
@@ -77,7 +71,7 @@ TEMPLATES = [
     },
 ]
 
-# WSGI_APPLICATION = 'ressonantes.wsgi.application'
+WSGI_APPLICATION = 'ressonantes.wsgi.application'
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
@@ -146,8 +140,8 @@ MEDIA_ROOT = '/vol/web/media'
 
 # AUTH_USER_MODEL = 'users.User'
 
-# BASE_URL = 'https://www.myurl.com.br'
-# DEFAULT_FROM_EMAIL = 'andregustavo.castro@gmail.com'
+BASE_URL = 'https://www.myurl.com.br'
+DEFAULT_FROM_EMAIL = 'andregustavo.castro@gmail.com'
 
 
 # CORS_ORIGIN_ALLOW_ALL = True

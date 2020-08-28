@@ -17,7 +17,6 @@ services:
       - DB_NAME=db_ressonantes_app
       - DB_USER=postgres
       - DB_PASSWORD=K8YvzabSrzeGUAecJ8hQkfuXZEjU9ZcY
-      - SECRET_KEY=${SECRET_KEY}
 
     depends_on:
       - ressonantes_db

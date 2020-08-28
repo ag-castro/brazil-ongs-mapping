@@ -25,23 +25,31 @@ from .base import WSGI_APPLICATION
 import dj_database_url
 
 
+WSGI_APPLICATION = 'ressonantes.wsgi.application'
+
 # SECURITY WARNING: keep the secret key used in production secret!
 #  ^@%h28h9wit$ous5j^3%rq-4j%*!t^#2-d4pbvzkdxkz%edg64
 
 SECRET_KEY = env('SECRET_KEY')
 DEBUG = env('DEBUG')
+ALLOWED_HOSTS = ['*']
 DATABASES = {'default': {}}
 
-ALLOWED_HOSTS = ['*']
-
-WSGI_APPLICATION = 'ressonantes.wsgi.application'
 
 DATABASES['default'] = dj_database_url.config(
     default=env('DATABASE_URL'),
     engine='django.db.backends.postgresql'
 )
 
-print('KKKKKKKEEEEEEYYYYYY', DATABASES)
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'HOST': os.environ.get('DB_HOST'),
+#         'NAME': os.environ.get('DB_NAME'),
+#         'USER': os.environ.get('DB_USER'),
+#         'PASSWORD': os.environ.get('DB_PASSWORD'),
+#     }
+# }
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
