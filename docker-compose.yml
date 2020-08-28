@@ -1,0 +1,28 @@
+version: "3"
+
+services:
+  ressonantes_app:
+    build:
+      context: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./ressonantes:/ressonantes
+    command: >
+      sh -c "python manage.py wait_for_db &&
+             python manage.py migrate &&
+             python manage.py runserver 0.0.0.0:8000 --settings=ressonantes.settings.development"
+    environment:
+      - DB_HOST=ressonantes_db
+      - DB_NAME=db_ressonantes_app
+      - DB_USER=postgres
+      - DB_PASSWORD=K8YvzabSrzeGUAecJ8hQkfuXZEjU9ZcY
+      - SECRET_KEY=${SECRET_KEY}
+    depends_on:
+      - ressonantes_db
+  ressonantes_db:
+    image: postgres:12-alpine
+    environment:
+      - POSTGRES_DB=db_ressonantes_app
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=K8YvzabSrzeGUAecJ8hQkfuXZEjU9ZcY
