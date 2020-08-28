@@ -77,7 +77,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'ressonantes.wsgi.application'
+# WSGI_APPLICATION = 'ressonantes.wsgi.application'
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
@@ -146,8 +146,8 @@ MEDIA_ROOT = '/vol/web/media'
 
 # AUTH_USER_MODEL = 'users.User'
 
-BASE_URL = 'https://www.ressonantes.com.br'
-DEFAULT_FROM_EMAIL = 'castro@webappsagency.com.br'
+# BASE_URL = 'https://www.myurl.com.br'
+# DEFAULT_FROM_EMAIL = 'andregustavo.castro@gmail.com'
 
 
 # CORS_ORIGIN_ALLOW_ALL = True
