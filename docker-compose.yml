@@ -17,12 +17,18 @@ services:
       - DB_NAME=db_ressonantes_app
       - DB_USER=postgres
       - DB_PASSWORD=K8YvzabSrzeGUAecJ8hQkfuXZEjU9ZcY
-
+    restart: always
     depends_on:
       - ressonantes_db
   ressonantes_db:
-    image: postgres:12-alpine
+    image: postgres:12
+    restart: always
     environment:
       - POSTGRES_DB=db_ressonantes_app
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=K8YvzabSrzeGUAecJ8hQkfuXZEjU9ZcY
+    volumes:
+      - postgres:/var/lib/postgresql/data
+
+volumes:
+  postgres:

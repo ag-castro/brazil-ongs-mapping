@@ -138,10 +138,10 @@ STATIC_ROOT = '/vol/web/static'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = '/vol/web/media'
 
-# AUTH_USER_MODEL = 'users.User'
+AUTH_USER_MODEL = 'core.User'
 
-BASE_URL = 'https://www.myurl.com.br'
-DEFAULT_FROM_EMAIL = 'andregustavo.castro@gmail.com'
+BASE_URL = env('BASE_URL')
+DEFAULT_FROM_EMAIL = env('DEFAULT_FROM_EMAIL')
 
 
 # CORS_ORIGIN_ALLOW_ALL = True

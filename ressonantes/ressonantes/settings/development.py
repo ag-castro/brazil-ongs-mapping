@@ -1,6 +1,7 @@
 from .base import os
 from .base import AUTHENTICATION_BACKENDS
 from .base import AUTH_PASSWORD_VALIDATORS
+from .base import AUTH_USER_MODEL
 from .base import BASE_DIR
 from .base import BASE_URL
 from .base import CORS_ALLOWED_ORIGINS
@@ -28,7 +29,7 @@ import dj_database_url
 WSGI_APPLICATION = 'ressonantes.wsgi.application'
 
 # SECURITY WARNING: keep the secret key used in production secret!
-#  ^@%h28h9wit$ous5j^3%rq-4j%*!t^#2-d4pbvzkdxkz%edg64
+
 
 SECRET_KEY = env('SECRET_KEY')
 DEBUG = env('DEBUG')
