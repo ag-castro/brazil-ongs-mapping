@@ -38,6 +38,7 @@ INSTALLED_APPS = [
 
     # APPLICATION
     'core',
+    'user',
 ]
 
 MIDDLEWARE = [
@@ -113,6 +114,13 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': NumericPasswordValidator,
     },
 ]
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
+}
 
 
 # Internationalization

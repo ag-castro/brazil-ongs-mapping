@@ -1,3 +1,4 @@
+from datetime import timedelta
 from .base import os
 from .base import AUTHENTICATION_BACKENDS
 from .base import AUTH_PASSWORD_VALIDATORS
@@ -14,6 +15,7 @@ from .base import MEDIA_URL
 from .base import MIDDLEWARE
 from .base import PASSWORD_HASHERS
 from .base import PROJECT_DIR
+from .base import REST_FRAMEWORK
 from .base import ROOT_URLCONF
 from .base import STATIC_ROOT
 from .base import STATIC_URL
@@ -51,6 +53,10 @@ DATABASES['default'] = dj_database_url.config(
 #         'PASSWORD': os.environ.get('DB_PASSWORD'),
 #     }
 # }
+
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=180),
+}
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
