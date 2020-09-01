@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     # APPLICATION
     'core',
     'user',
+    'locales',
 ]
 
 MIDDLEWARE = [

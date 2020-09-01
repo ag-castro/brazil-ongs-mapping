@@ -76,3 +76,12 @@ class CustomUserModelTests(TestCase):
                 first_name=self.extra_fields['first_name'],
                 last_name=self.extra_fields['last_name']
             )
+
+    def test_create_new_superuser(self):
+        """Test creating a new superuser"""
+        user = get_user_model().objects.create_superuser(
+            self.email, self.password,
+            **self.extra_fields
+        )
+        self.assertTrue(user.is_superuser)
+        self.assertTrue(user.is_staff)
