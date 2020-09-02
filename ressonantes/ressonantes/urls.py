@@ -25,10 +25,18 @@ from rest_framework_simplejwt.views import (
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/user/', include('user.urls')),
-    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain'),
-    path('api/token/refresh/', TokenRefreshView.as_view(),
+
+    # User and Auth
+    path('rh-ongs/v1/api/user/', include('user.urls')),
+    path('rh-ongs/v1/api/token/',
+         TokenObtainPairView.as_view(),
+         name='token_obtain'),
+    path('rh-ongs/v1/api/token/refresh/',
+         TokenRefreshView.as_view(),
          name='token_refresh'),
+
+    # Cities and Ufs
+    path('rh-ongs/v1/api/locales/', include('locales.urls')),
 ]
 
 if settings.DEBUG:

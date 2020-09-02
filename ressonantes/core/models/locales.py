@@ -38,7 +38,7 @@ class City(models.Model):
         'core.Uf', null=True,
         related_name='cities_uf',
         verbose_name='Estado',
-        on_delete=models.SET_NULL
+        on_delete=models.PROTECT
     )
     name = models.CharField(
         blank=False, max_length=100,

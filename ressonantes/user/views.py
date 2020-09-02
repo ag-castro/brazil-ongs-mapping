@@ -1,6 +1,6 @@
 from django.contrib.auth import get_user_model
 from django.utils.translation import ugettext_lazy as _
-from rest_framework import generics, authentication, permissions, status
+from rest_framework import generics, permissions, status
 from rest_framework.response import Response
 from rest_framework_simplejwt.authentication import JWTAuthentication
 from user.serializers import UserSerializer, ChangeUserPasswordSerializer
