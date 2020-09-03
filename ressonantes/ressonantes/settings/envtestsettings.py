@@ -1,6 +1,10 @@
 import os
 from datetime import timedelta
 import dj_database_url
+import environ
+
+env = environ.Env()
+env.read_env(env.str('ENV_PATH', '.testenv'))
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
