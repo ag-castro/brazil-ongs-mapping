@@ -2,6 +2,10 @@ language: python
 python:
   - "3.8"
 
+env:
+  - DEFAULT_FROM_EMAIL=castro@webappsagency.com.br
+  - BASE_URL=www.ressonantes.com
+
 services:
   - docker
 
