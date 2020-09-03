@@ -9,7 +9,8 @@ before_script:
   - touch .env
   - DEBUG=True
   - echo SECRET_KEY=$SECRET_KEY >> .env
-  - echo DATABASE_URL=$DATABASE_URL >> .env
+  - echo SECRET_KEY=$SECRET_KEY >> .env
+  - echo BASE_URL=$BASE_URL >> .env
   - pip install docker-compose
 
 script:

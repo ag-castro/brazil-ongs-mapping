@@ -149,7 +149,7 @@ MEDIA_ROOT = '/vol/web/media'
 
 AUTH_USER_MODEL = 'core.User'
 
-BASE_URL = 'http://localhost:8000'
+BASE_URL = env('BASE_URL')
 
 
 # CORS_ORIGIN_ALLOW_ALL = True
