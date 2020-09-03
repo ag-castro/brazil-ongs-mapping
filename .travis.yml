@@ -4,7 +4,7 @@ python:
 
 env:
   - DEFAULT_FROM_EMAIL=castro@webappsagency.com.br
-  - BASE_URL=www.ressonantes.com
+  - BASE_URL=http://www.ressonantes.com
 
 services:
   - docker
