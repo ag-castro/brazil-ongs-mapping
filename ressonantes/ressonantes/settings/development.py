@@ -6,7 +6,7 @@ from .base import AUTH_USER_MODEL
 from .base import BASE_DIR
 from .base import BASE_URL
 from .base import CORS_ALLOWED_ORIGINS
-from .base import DEFAULT_FROM_EMAIL
+# from .base import DEFAULT_FROM_EMAIL
 from .base import env
 from .base import INSTALLED_APPS
 from .base import LANGUAGE_CODE

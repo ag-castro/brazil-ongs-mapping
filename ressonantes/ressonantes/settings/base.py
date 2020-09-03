@@ -149,12 +149,10 @@ MEDIA_ROOT = '/vol/web/media'
 
 AUTH_USER_MODEL = 'core.User'
 
-BASE_URL = env('BASE_URL')
-DEFAULT_FROM_EMAIL = env('DEFAULT_FROM_EMAIL')
+BASE_URL = 'http://localhost:8000'
 
 
 # CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOWED_ORIGINS = [
     BASE_URL,
-    'http://localhost:8000',
 ]
