@@ -5,7 +5,12 @@ python:
 services:
   - docker
 
-before_script: pip install docker-compose
+before_script: 
+  - touch .env
+  - DEBUG=True
+  - echo SECRET_KEY=$SECRET_KEY >> .env
+  - echo DATABASE_URL=$DATABASE_URL >> .env
+  - pip install docker-compose
 
 script:
   - docker-compose run ressonantes_app sh -c "python manage.py test && flake8"
