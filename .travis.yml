@@ -2,9 +2,6 @@ language: python
 python:
   - "3.8"
 
-env:
-  - ENV_PATH=.test.env
-
 services:
   - docker
 
