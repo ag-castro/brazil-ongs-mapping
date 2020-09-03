@@ -13,7 +13,8 @@ services:
   - docker
 
 before_script: 
-  - touch /ressonantes/ressonantes/settings/.env
+  - pwd
+  - touch /ressonantes/settings/.env
   - echo DEBUG=$DEBUG >> .env
   - echo SECRET_KEY=$SECRET_KEY >> .env
   - echo BASE_URL=$BASE_URL >> .env
