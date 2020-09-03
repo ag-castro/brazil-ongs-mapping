@@ -2,14 +2,6 @@ language: python
 python:
   - "3.8"
 
-env:
-  global:
-    - DJANGO_SETTINGS_MODULE=ressonantes.settings.envtestsettings
-    - DEBUG=True
-    - SECRET_KEY=^@%h28h9wit$ous5j^3%rq-4j%*!t^#2-d4pbvzkdxkz%edg64
-    - DATABASE_URL=psql://postgres:K8YvzabSrzeGUAecJ8hQkfuXZEjU9ZcY@ressonantes_db/db_ressonantes_app
-    - BASE_URL=http://localhost:8000/
-
 services:
   - docker
 
@@ -22,4 +14,4 @@ before_script:
   - pip install docker-compose
 
 script:
-  - docker-compose run ressonantes_app sh -c "python manage.py test && flake8 --settings=ressonantes.settings.envtestsettings"
+  - docker-compose run ressonantes_app sh -c "python manage.py test && flake8"
