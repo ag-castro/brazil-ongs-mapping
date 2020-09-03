@@ -15,10 +15,10 @@ services:
 
 before_script: 
   - touch .env
-  - echo DEBUG=$DEBUG >> .env
-  - echo SECRET_KEY=$SECRET_KEY >> .env
-  - echo BASE_URL=$BASE_URL >> .env
-  - echo DATABASE_URL=$DATABASE_URL >> .env
+  - echo DEBUG=${DEBUG} >> .env
+  - echo SECRET_KEY=${SECRET_KEY} >> .env
+  - echo BASE_URL=${BASE_URL} >> .env
+  - echo DATABASE_URL=${DATABASE_URL} >> .env
   - pip install docker-compose
 
 script:
