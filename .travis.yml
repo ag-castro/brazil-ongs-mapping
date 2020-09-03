@@ -3,8 +3,7 @@ python:
   - "3.8"
 
 env:
-  - DEFAULT_FROM_EMAIL=castro@webappsagency.com.br
-  - BASE_URL=http://www.ressonantes.com
+  - ENV_PATH=.test.env
 
 services:
   - docker
@@ -12,4 +11,4 @@ services:
 before_script: pip install docker-compose
 
 script:
-  - docker-compose run ressonantes_app sh -c "ENV_PATH=.test.env python manage.py test && flake8"
+  - docker-compose run ressonantes_app sh -c "python manage.py test && flake8"
