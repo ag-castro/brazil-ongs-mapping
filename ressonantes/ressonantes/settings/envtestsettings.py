@@ -147,7 +147,7 @@ MEDIA_ROOT = '/vol/web/media'
 
 AUTH_USER_MODEL = 'core.User'
 
-BASE_URL = os.environ.get('BASE_URL')
+BASE_URL = 'http://localhost:8000/'
 
 
 # CORS_ORIGIN_ALLOW_ALL = True
