@@ -5,6 +5,7 @@ import dj_database_url
 ALLOWED_HOSTS = ['*']
 SECRET_KEY = env('SECRET_KEY')
 DEBUG = env('DEBUG')
+BASE_URL = env('BASE_URL')
 DATABASES = {'default': {}}
 DATABASES['default'] = dj_database_url.config(
     default=env('DATABASE_URL'),
