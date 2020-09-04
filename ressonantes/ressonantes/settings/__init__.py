@@ -2,15 +2,17 @@ from .base import *
 import dj_database_url
 
 
+SECRET_KEY = '^@%h28h9wit$ous5j^3%rq-4j%*!t^#2-d4pbvzkdxkz%edg64'
+DEBUG = True
 ALLOWED_HOSTS = ['*']
-SECRET_KEY = env('SECRET_KEY')
-DEBUG = env('DEBUG')
-BASE_URL = env('BASE_URL')
 DATABASES = {'default': {}}
+
+
 DATABASES['default'] = dj_database_url.config(
-    default=env('DATABASE_URL'),
+    default='psql://postgres:K8YvzabSrzeGUAecJ8hQkfuXZEjU9ZcY@ressonantes_db/db_ressonantes_app',
     engine='django.db.backends.postgresql'
 )
+
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql',

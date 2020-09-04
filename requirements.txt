@@ -6,7 +6,6 @@ dj-database-url==0.5.0
 Django==2.2.15
 django-cors-headers==3.4.0
 django-debug-toolbar==2.2
-django-environ==0.4.5
 django-js-asset==1.2.2
 django-modelcluster==5.0.2
 django-mptt==0.11.0

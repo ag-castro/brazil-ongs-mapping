@@ -7,7 +7,6 @@ from .base import BASE_DIR
 from .base import BASE_URL
 from .base import CORS_ALLOWED_ORIGINS
 # from .base import DEFAULT_FROM_EMAIL
-from .base import env
 from .base import INSTALLED_APPS
 from .base import LANGUAGE_CODE
 from .base import MEDIA_ROOT
@@ -33,17 +32,16 @@ WSGI_APPLICATION = 'ressonantes.wsgi.application'
 # SECURITY WARNING: keep the secret key used in production secret!
 
 
-SECRET_KEY = env('SECRET_KEY')
-DEBUG = env('DEBUG')
+SECRET_KEY = '^@%h28h9wit$ous5j^3%rq-4j%*!t^#2-d4pbvzkdxkz%edg64'
+DEBUG = True
 ALLOWED_HOSTS = ['*']
 DATABASES = {'default': {}}
 
 
 DATABASES['default'] = dj_database_url.config(
-    default=env('DATABASE_URL'),
+    default='psql://postgres:K8YvzabSrzeGUAecJ8hQkfuXZEjU9ZcY@ressonantes_db/db_ressonantes_app',
     engine='django.db.backends.postgresql'
 )
-
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql',

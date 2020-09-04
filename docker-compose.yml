@@ -17,6 +17,7 @@ services:
       - DB_NAME=db_ressonantes_app
       - DB_USER=postgres
       - DB_PASSWORD=K8YvzabSrzeGUAecJ8hQkfuXZEjU9ZcY
+      
     restart: always
     depends_on:
       - ressonantes_db

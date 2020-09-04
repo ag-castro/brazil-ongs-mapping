@@ -11,10 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-import environ
 
-env = environ.Env()
-environ.Env.read_env()
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -149,7 +146,7 @@ MEDIA_ROOT = '/vol/web/media'
 
 AUTH_USER_MODEL = 'core.User'
 
-BASE_URL = env('BASE_URL')
+BASE_URL = os.environ.get('BASE_URL')
 
 
 # CORS_ORIGIN_ALLOW_ALL = True
