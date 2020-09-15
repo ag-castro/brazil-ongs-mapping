@@ -67,6 +67,7 @@ class Organization(models.Model):
     )
     email = models.EmailField(
         blank=True, null=True,
+        validators=[validate_email],
         verbose_name='E-mail para Contatos',
         help_text='Digite um e-mail válido.'
     )

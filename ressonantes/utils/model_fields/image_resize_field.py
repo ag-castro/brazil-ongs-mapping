@@ -1,4 +1,3 @@
-import os
 import sys
 from io import BytesIO
 from PIL import Image, ImageFile, ImageOps, ExifTags
@@ -58,8 +57,9 @@ def normalize_rotation(image):
     else:
         """ No orientation header found, do nothing. """
         return image
-    """ Apply the different possible orientations to 
-    the data; preserve format. 
+
+    """
+    Apply the different possible orientations to the data; preserve format.
     """
 
     format = image.format
@@ -181,20 +181,3 @@ class ImageResizerField(ImageField):
         ]:
             kwargs[custom_kwargs] = getattr(self, custom_kwargs)
         return name, path, args, kwargs
-
-
-# try:
-#     from south.modelsinspector import add_introspection_rules
-# except ImportError:
-#     pass
-# else:
-#     rules = [
-#         (
-#             (ImageResizerField,),
-#             [],
-#             {
-#             },
-#         )
-#     ]
-    # add_introspection_rules(
-    #     rules, ["^utils\.model_fields\.image_rezise_field\.ImageResizerField"])
